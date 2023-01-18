@@ -1,14 +1,14 @@
 package ru.gb.models;
 
 public class Person {
-    private String firstName;
-    private String lastName;
-    private String middleName;
-    private String country;
-    private String address;
-    private String phone;
-    private int age;
-    private String gender;
+    private final String firstName;
+    private final String lastName;
+    private final String middleName;
+    private final String country;
+    private final String address;
+    private final String phone;
+    private final int age;
+    private final String gender;
 
     public String getFirstName() {
         return firstName;
@@ -46,8 +46,8 @@ public class Person {
         gender = builder.gender;
     }
 
-    public Person() {
-    }
+//    public Person() {
+//    }
 
     public static Builder builder(){
         return new Builder();
