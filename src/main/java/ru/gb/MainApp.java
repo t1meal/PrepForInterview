@@ -1,14 +1,18 @@
 package ru.gb;
 
 
+import ru.gb.models.Circle;
 import ru.gb.models.Person;
+import ru.gb.models.Square;
+import ru.gb.models.Triangle;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class MainApp
-{
-    public static void main( String[] args){
+public class MainApp {
+    public static void main(String[] args) {
 
         // 1. Создание экземпляра класса со статическим методом иниализации и стическим вложенным классом.
         Person firstPerson = Person.builder()
@@ -47,8 +51,10 @@ public class MainApp
         list.add(square);
         list.add(triangle);
 
-        for (Figures f: list){
+        for (Figures f : list) {
             f.init();
         }
+
+
     }
 }
