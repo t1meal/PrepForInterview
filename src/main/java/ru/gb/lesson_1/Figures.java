@@ -1,4 +1,4 @@
-package ru.gb;
+package ru.gb.lesson_1;
 
 public class Figures {
     private final String type;

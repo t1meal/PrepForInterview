@@ -1,4 +1,4 @@
-package ru.gb.models;
+package ru.gb.lesson_1.models;
 
 public class Person {
     private String firstName;

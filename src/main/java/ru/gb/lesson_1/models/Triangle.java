@@ -1,6 +1,6 @@
-package ru.gb.models;
+package ru.gb.lesson_1.models;
 
-import ru.gb.Figures;
+import ru.gb.lesson_1.Figures;
 
 public class Triangle extends Figures {
     @Override
