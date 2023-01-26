@@ -34,6 +34,30 @@ public class Person {
     public String getGender() {
         return gender;
     }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+    public void setCountry(String country) {
+        this.country = country;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public void setAge(int age) {
+        this.age = age;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
 
     private Person(Builder builder) {
         firstName = builder.firstName;
@@ -46,10 +70,10 @@ public class Person {
         gender = builder.gender;
     }
 
-    public Person() {
-    }
+//    public Person() {
+//    }
 
-    public static Builder builder(){
+    public static Builder builder() {
         return new Builder();
     }
 
@@ -67,7 +91,7 @@ public class Person {
                 '}';
     }
 
-    public static class Builder{
+    public static class Builder {
         private String firstName;
         private String lastName;
         private String middleName;
@@ -77,39 +101,47 @@ public class Person {
         private int age;
         private String gender;
 
-        public Builder firstName (String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
-        public Builder lastName (String lastName) {
+
+        public Builder lastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
-        public Builder middleName (String middleName) {
+
+        public Builder middleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
-        public Builder country (String country) {
+
+        public Builder country(String country) {
             this.country = country;
             return this;
         }
-        public Builder address (String address) {
+
+        public Builder address(String address) {
             this.address = address;
             return this;
         }
-        public Builder phone (String phone) {
+
+        public Builder phone(String phone) {
             this.phone = phone;
             return this;
         }
-        public Builder age (int age) {
+
+        public Builder age(int age) {
             this.age = age;
             return this;
         }
-        public Builder gender (String gender) {
+
+        public Builder gender(String gender) {
             this.gender = gender;
             return this;
         }
-        public Person build(){
+
+        public Person build() {
             return new Person(this);
         }
     }

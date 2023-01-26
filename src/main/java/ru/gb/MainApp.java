@@ -1,13 +1,20 @@
 package ru.gb;
 
 
+import ru.gb.models.Circle;
 import ru.gb.models.Person;
+import ru.gb.models.Square;
+import ru.gb.models.Triangle;
 
-public class MainApp
-{
-    public static void main( String[] args){
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-        // 1. Создание экземпляра класса со статическим методом иниализации и стическим воженным классом.
+public class MainApp {
+    public static void main(String[] args) {
+
+        // 1. Создание экземпляра класса со статическим методом иниализации и стическим вложенным классом.
         Person firstPerson = Person.builder()
                 .firstName("Alex")
                 .lastName("Lesly")
@@ -19,7 +26,7 @@ public class MainApp
                 .gender("Male")
                 .build();
 
-        // 2. Реализация билдера без статики.
+        // 1. Реализация билдера без статики.
 //        Person anotherPerson = new Person().builder()
 //                .firstName("Bob")
 //                .lastName("Frouly")
@@ -33,5 +40,21 @@ public class MainApp
 
         System.out.println(firstPerson);
 //        System.out.println(anotherPerson);
+
+        // 2. Реализация полиморфизма. Можно было бы описать еще методы с одиновыми названиями, но принимающие разные аргументы, но это не интересно))
+        Figures circle = new Circle();
+        Figures square = new Square();
+        Figures triangle = new Triangle();
+
+        List<Figures> list = new ArrayList<>();
+        list.add(circle);
+        list.add(square);
+        list.add(triangle);
+
+        for (Figures f : list) {
+            f.init();
+        }
+
+
     }
 }
