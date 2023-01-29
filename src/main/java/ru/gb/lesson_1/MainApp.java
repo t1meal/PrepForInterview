@@ -1,15 +1,13 @@
-package ru.gb;
+package ru.gb.lesson_1;
 
 
-import ru.gb.models.Circle;
-import ru.gb.models.Person;
-import ru.gb.models.Square;
-import ru.gb.models.Triangle;
+import ru.gb.lesson_1.models.Circle;
+import ru.gb.lesson_1.models.Person;
+import ru.gb.lesson_1.models.Square;
+import ru.gb.lesson_1.models.Triangle;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MainApp {
     public static void main(String[] args) {
